@@ -53,7 +53,7 @@ const contactsSlice = createSlice({
       state.contacts.error = action.payload;
     },
   },
-   reducers: {
+   reducer: {
     changeFilterAction: (state, action) => {
       state.filter = action.payload;
     },
