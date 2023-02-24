@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { deleteContact } from "redux/contacts.slice";
+import { deleteContact } from 'redux/operations';
 import styles from 'components/ContactList/ContactList.module.css';
 import {  contactsSelect, filterSelect } from "redux/selector";
 
@@ -8,7 +8,7 @@ export const ContactsList = () => {
   const filteredContacts = useSelector(filterSelect);
   const contacts = useSelector(contactsSelect);
  
-
+  console.log(contacts)
   const onDeleteContact = (id) => {
     dispatch(deleteContact(id));
   };
@@ -21,7 +21,7 @@ export const ContactsList = () => {
     );
    
   };
-
+  
   const visibleContacts = getVisibleContacts();
 
   return (
