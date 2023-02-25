@@ -29,7 +29,7 @@ export const ContactsList = () => {
       {visibleContacts.map((contact) => (
         <li key={contact.id} className={styles.item}>
             <p className={styles.text}>{contact.name}:{contact.number}</p>
-            <button className={styles.btn} onClick={() => onDeleteContact(contact.id)}>
+            <button className={styles.btn} onClick={() => dispatch(onDeleteContact(contact.id))}>
               Delete contact
             </button>
         </li>
